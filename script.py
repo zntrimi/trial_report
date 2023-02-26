@@ -61,7 +61,7 @@ if upload_image is not None:
 
             with open("result.jpg", "rb") as file:
                 btn = st.download_button(
-                label="",
+                label="画像をダウンロード",
                 data=file,
                 file_name="comment_"+name+".jpg",
                 mime="image/ipg"
