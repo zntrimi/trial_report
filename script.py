@@ -14,7 +14,7 @@ crew = st.selectbox(
 )
 
 upload_image = st.file_uploader("画像をアップロードしてください", type=["jpg", "jpeg", "png"])
-name = st.text_input("こどものなまえ")
+name = st.text_input("こどものなまえ(〇〇ちゃん/くん)")
 comment = st.text_input("コメント(難しい漢字は表示されないよ！)")
 
 if upload_image is not None:
