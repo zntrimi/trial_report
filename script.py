@@ -2,7 +2,7 @@ from PIL import Image, ImageDraw, ImageFont
 import streamlit as st
 import textwrap
 
-st.title("タイトル")
+st.title("体験会用コメントシート")
 
 book = st.selectbox(
     'どの絵本ですか？',
