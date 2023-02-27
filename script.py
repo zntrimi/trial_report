@@ -2,7 +2,10 @@ from PIL import Image, ImageDraw, ImageFont
 import streamlit as st
 import textwrap
 
-st.title("体験会用コメントシート")
+#st.title("体験会用コメントシート")
+st.set_page_config(page_title="体験会コメントシートメーカー")
+st.title("体験会コメントシートメーカー")
+
 
 book = st.selectbox(
     'どの絵本ですか？',
@@ -57,8 +60,6 @@ if upload_image is not None:
 
             # 画像を保存する
             img.save("result.jpg", quality=100)
-            st.image("result.jpg")
-
             with open("result.jpg", "rb") as file:
                 btn = st.download_button(
                 label="画像をダウンロード",
@@ -66,6 +67,10 @@ if upload_image is not None:
                 file_name="comment_"+name+".jpg",
                 mime="image/ipg"
             )
+            
+            st.image("result.jpg")
+
+    
         else:
             st.warning('コメントと名前を記入してから実行してください！', icon="⚠️")
 
