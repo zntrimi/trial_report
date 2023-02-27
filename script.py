@@ -33,7 +33,7 @@ if upload_image is not None:
         else:
             img = Image.open("4.jpg") 
 
-        ss_image = Image.open(upload_image)
+        ss_image = Image.open(upload_image).convert('RGBA')
 
         if ss_image is not None and name != "" and comment !="":
             # 画像を開く
@@ -47,7 +47,6 @@ if upload_image is not None:
             draw = ImageDraw.Draw(img)
             font_name = ImageFont.truetype("b.ttc", 90) # フォントとサイズを指定する
             draw.text((1820, 300), name, fill=("white"), font=font_name)
-
 
             wrap_list = textwrap.wrap(comment, 22)  
             font_comment = ImageFont.truetype("c.otf", 90) # フォントとサイズを指定する
