@@ -25,13 +25,13 @@ if upload_image is not None:
     if st.button("実行"):
 
         if book == "たんぽぽのぽんちゃん" and crew =="Cory":
-            img = Image.open("1.jpg")
+            img = Image.open("Asset/1.jpg")
         elif book == "たんぽぽのぽんちゃん" and crew =="Zen":
-            img = Image.open("3.jpg")
+            img = Image.open("Asset/3.jpg")
         elif book == "ぼくエスカレーター" and crew == "Cory":
-            img = Image.open("2.jpg")
+            img = Image.open("Asset/2.jpg")
         else:
-            img = Image.open("4.jpg") 
+            img = Image.open("Asset/4.jpg") 
 
         ss_image = Image.open(upload_image).convert('RGBA')
 
@@ -45,11 +45,11 @@ if upload_image is not None:
 
             # テキストを描画する
             draw = ImageDraw.Draw(img)
-            font_name = ImageFont.truetype("b.ttc", 90) # フォントとサイズを指定する
+            font_name = ImageFont.truetype("Asset/b.ttc", 90) # フォントとサイズを指定する
             draw.text((1820, 300), name, fill=("white"), font=font_name)
 
             wrap_list = textwrap.wrap(comment, 22)  
-            font_comment = ImageFont.truetype("c.otf", 90) # フォントとサイズを指定する
+            font_comment = ImageFont.truetype("Asset/c.otf", 90) # フォントとサイズを指定する
             line_counter = 0
 
             for line in wrap_list:
