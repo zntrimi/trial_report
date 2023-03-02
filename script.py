@@ -31,7 +31,7 @@ if upload_image is not None:
             img = Image.open("Assets/2.jpg")
         elif book == "ぼくエスカレーター" and crew == "Zen":
             img = Image.open("Assets/4.jpg") 
-        elif book == "グルメなペリカン" and crew == "Zen":
+        elif book == "グルメなペリカン" and crew == "Cory":
             img = Image.open("Assets/5.jpg") 
         else:
             img = Image.open("Assets/6.jpg") 
