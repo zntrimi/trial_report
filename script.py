@@ -8,7 +8,7 @@ st.title("体験会コメントシートメーカー")
 
 book = st.selectbox(
     'どの絵本ですか？',
-    ('たんぽぽのぽんちゃん', 'ぼくエスカレーター'))
+    ('たんぽぽのぽんちゃん', 'ぼくエスカレーター', 'グルメなペリカン'))
 
 crew = st.selectbox(
     '読み手は誰ですか?',
@@ -29,8 +29,15 @@ if upload_image is not None:
             img = Image.open("Assets/3.jpg")
         elif book == "ぼくエスカレーター" and crew == "Cory":
             img = Image.open("Assets/2.jpg")
-        else:
+        elif book == "ぼくエスカレーター" and crew == "Zen":
             img = Image.open("Assets/4.jpg") 
+        elif book == "グルメなペリカン" and crew == "Zen":
+            img = Image.open("Assets/5.jpg") 
+        else:
+            img = Image.open("Assets/6.jpg") 
+
+
+
 
         ss_image = Image.open(upload_image).convert('RGBA')
 
@@ -67,8 +74,6 @@ if upload_image is not None:
             )
             
             st.image("result.jpg")
-
     
         else:
             st.warning('コメントと名前を記入してから実行してください！', icon="⚠️")
-
