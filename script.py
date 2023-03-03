@@ -82,6 +82,7 @@ if upload_image is not None:
             )
             
             st.image("result.jpg")
+            st.subheader("LINE用フォローアップ")
             st.code('', line_text)
 
         else:
