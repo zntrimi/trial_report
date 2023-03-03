@@ -63,6 +63,14 @@ if upload_image is not None:
                 draw.multiline_text((313, y), line, fill=("black"), font=font_comment)
                 line_counter = line_counter +1
 
+            filename = 'line_followup.txt'  # 読み込むファイル名を指定する
+
+# ファイルを読み込んで、文章全体を1つの変数に格納する
+            with open(filename) as file:
+                line_text = file.read()
+
+            line_text = line_text.format(name)
+
             # 画像を保存する
             img.save("result.jpg", quality=100)
             with open("result.jpg", "rb") as file:
@@ -74,6 +82,7 @@ if upload_image is not None:
             )
             
             st.image("result.jpg")
-    
+            st.code('', line_text)
+
         else:
             st.warning('コメントと名前を記入してから実行してください！', icon="⚠️")
