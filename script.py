@@ -3,8 +3,20 @@ import streamlit as st
 import textwrap
 
 #st.title("体験会用コメントシート")
-st.set_page_config(page_title="体験会コメントシートメーカー")
+st.set_page_config(
+    page_title="体験会コメントシートメーカー",
+    page_icon="Assets/icon.png",
+    layout="centered",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get help': 'https://yomo-issyo.com',
+        'Report a bug': "https://yomo-issyo.com",
+        'About': "#This is trial comment sheet for YOMY!. This is an *super* cool app!"
+    }
+)
 st.title("体験会コメントシートメーカー")
+
+
 
 book = st.selectbox(
     'どの絵本ですか？',
