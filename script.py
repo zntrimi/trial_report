@@ -100,5 +100,6 @@ if upload_image is not None:
             st.subheader("LINE用フォローアップ")
             st.code('', line_text)
             st.code("text text")
+            st.balloons()
         else:
             st.warning('コメントと名前を記入してから実行してください！', icon="⚠️")
