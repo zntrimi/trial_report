@@ -17,7 +17,6 @@ st.set_page_config(
 st.title("体験会コメントシートメーカー")
 
 
-
 book = st.selectbox(
     'どの絵本ですか？',
     ('たんぽぽのぽんちゃん', 'ぼくエスカレーター', 'グルメなペリカン'))
@@ -99,7 +98,7 @@ if upload_image is not None:
             st.image("result.jpg")
             st.subheader("LINE用フォローアップ")
             st.code('', line_text)
-            st.code("text text")
+            st.text(line_text)
             st.balloons()
         else:
             st.warning('コメントと名前を記入してから実行してください！', icon="⚠️")
